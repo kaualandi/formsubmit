@@ -10,6 +10,7 @@ import { createServer } from '@config/express';
 import { AddressInfo } from 'net';
 import http from 'http';
 import { logger } from '@config/logger';
+import { sendMail } from './sendMail';
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || '5000';
@@ -22,6 +23,8 @@ async function startServer() {
       `Server ready at http://${addressInfo.address}:${addressInfo.port}`,
     );
   });
+
+  app.post('/send-mail/:to', sendMail);
 
   const signalTraps: NodeJS.Signals[] = ['SIGTERM', 'SIGINT', 'SIGUSR2'];
   signalTraps.forEach((type) => {
