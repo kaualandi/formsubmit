@@ -5,5 +5,6 @@ export interface SubmissionInfor {
 
 export interface SubmissionData {
   subject: string;
+  name: string;
   infors: SubmissionInfor[];
 }

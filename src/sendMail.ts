@@ -12,8 +12,7 @@ export async function sendMail(req: Request, res: Response): Promise<void> {
   await email.sendMail({
     from: '"Noclaf Forms" <eu@kaualf.com>',
     to,
-    subject: body.subject || 'Formulário de contato',
-    text: "Você recebeu um novo formulário de contato",
+    subject: `Você recebeu uma nova mensagem em "${body.name || 'seu formulário'}"!`,
     html: createHtmlTemplate(body, origin),
   });
 
