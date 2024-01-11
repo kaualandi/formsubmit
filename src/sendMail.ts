@@ -1,8 +1,7 @@
-import { Request, Response } from "express";
-import { SubmissionData } from "./model/html";
-import email from '@config/nodemailer';
-import { createHtmlTemplate } from "./htmlHelpers";
-
+import { Request, Response } from 'express';
+import { SubmissionData } from './model/html';
+import email from './config/nodemailer';
+import { createHtmlTemplate } from './htmlHelpers';
 
 export async function sendMail(req: Request, res: Response): Promise<void> {
   const body = req.body as unknown as SubmissionData;

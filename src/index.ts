@@ -1,16 +1,8 @@
 import 'dotenv/config';
-import * as moduleAlias from 'module-alias';
-const sourcePath = process.env.NODE_ENV === 'development' ? 'src' : __dirname;
-moduleAlias.addAliases({
-  '@server': sourcePath,
-  '@config': `${sourcePath}/config`,
-  '@domain': `${sourcePath}/domain`,
-});
-
-import { createServer } from '@config/express';
+import { createServer } from './config/express';
 import { AddressInfo } from 'net';
 import http from 'http';
-import { logger } from '@config/logger';
+import { logger } from './config/logger';
 import { sendMail } from './sendMail';
 
 const host = process.env.HOST || '0.0.0.0';
