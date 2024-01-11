@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import nodemailer from 'nodemailer';
 
 export default nodemailer.createTransport({

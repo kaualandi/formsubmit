@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import * as moduleAlias from 'module-alias';
 const sourcePath = process.env.NODE_ENV === 'development' ? 'src' : __dirname;
 moduleAlias.addAliases({
@@ -19,9 +20,7 @@ async function startServer() {
   const app = createServer();
   const server = http.createServer(app).listen({ host, port }, () => {
     const addressInfo = server.address() as AddressInfo;
-    logger.info(
-      `Server ready at http://${addressInfo.address}:${addressInfo.port}`,
-    );
+    logger.info(`Server ready at http://${addressInfo.address}:${addressInfo.port}`);
   });
 
   app.post('/send-mail/:to', sendMail);
