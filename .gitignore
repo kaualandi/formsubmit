@@ -29,4 +29,5 @@ build/
 .DS_Store
 
 .env
+.env.kaua
 *report.html
