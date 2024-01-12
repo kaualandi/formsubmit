@@ -29,7 +29,7 @@ export const HTML_TEMPLATE = `<!DOCTYPE html>
                       <tbody>
                         <tr>
                           <td align="center" valign="top" style="padding: 30px 0">
-                            <h1 align="center" style="font-family: 'Poppins', sans-serif; font-size: 26px;">Novo envio de {0}!</h1>
+                            <h1 align="center" style="font-family: 'Poppins', sans-serif; font-size: 26px;">New sending of {0}!</h1>
                           </td>
                         </tr>
                       </tbody>
@@ -90,7 +90,7 @@ export const HTML_TEMPLATE = `<!DOCTYPE html>
                           <td height="24px"></td>
                         </tr>
                         <tr>
-                          <td align="center" style="font-family: 'Poppins', sans-serif;">&copy; Noclaf Tech</td>
+                          <td align="center" style="font-family: 'Poppins', sans-serif;">&copy; International Mortgage Specialists</td>
                         </tr>
                         <tr>
                           <td height="24px"></td>

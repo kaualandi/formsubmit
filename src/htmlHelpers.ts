@@ -3,7 +3,7 @@ import { SubmissionData, SubmissionInfor } from './model/html';
 
 export function createHtmlTemplate(data: SubmissionData, from: string): string {
   const infors = createHtmlLines(data.infors);
-  const now = new Date().toLocaleString('pt-br', { timeZone: 'America/Sao_Paulo' });
+  const now = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
 
   return HTML_TEMPLATE.replace('{0}', from).replace('{1}', data.subject).replace('{2}', now).replace('{3}', infors);
 }

@@ -9,9 +9,9 @@ export async function sendMail(req: Request, res: Response): Promise<void> {
   const to = req.params.to;
 
   await email.sendMail({
-    from: '"Noclaf Forms" <eu@kaualf.com>',
+    from: '"IMS Forms" <imtgspecialists@gmail.com>',
     to,
-    subject: `Você recebeu uma nova mensagem em "${body.name || 'seu formulário'}"!`,
+    subject: `You have received a new message in "${body.name || 'your form'}"!`,
     html: createHtmlTemplate(body, origin),
   });
 
