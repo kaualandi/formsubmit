@@ -74,7 +74,7 @@ export const HTML_TEMPLATE = `<!DOCTYPE html>
                                 </tr>
 
                                 <tr>
-                                  <td align="end" style="font-family: 'Poppins', sans-serif; color: #101010;">Enviado: {2}</td>
+                                  <td align="end" style="font-family: 'Poppins', sans-serif; color: #101010;">Sent: {2}</td>
                                 </tr>
 
                                 <tr>
